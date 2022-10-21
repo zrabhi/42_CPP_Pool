@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 19:57:34 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/21 04:55:36 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/21 06:58:38 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Phonebook::~Phonebook()
 {
     std::cout << "\nSee You Again!" << std::endl;
 }
+
 int main()
 {
     Phonebook data;

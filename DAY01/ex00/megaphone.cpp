@@ -6,14 +6,14 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:17:23 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/18 22:28:26 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/21 06:56:46 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
 
-int     check_args(std::string str)
+static int     check_args(std::string str)
 {
     int i;
 

@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 03:05:10 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/21 06:40:35 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/21 06:58:05 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,7 +162,6 @@ void Phonebook::add(void)
     
     i = 0;
     printer(i);
-    // std::getline(std::cin, str);
     while (!std::cin.eof())
     {
         std::getline(std::cin, str);
