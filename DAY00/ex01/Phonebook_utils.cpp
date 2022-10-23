@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 03:05:10 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/21 22:11:30 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/22 23:30:59 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void    printer(int i)
     if (i == 3)
         std::cout << "Enter your phone_number: " ;
     if (i == 4)
-        std::cout << "Enter your darkest_s : " ;
+        std::cout << "Enter your darkest secret : " ;
 }
 
 std::string append_spc(int size)
@@ -63,7 +63,7 @@ void    Phonebook::get_index(void)
             if (str.empty())
                 std::cout << "Select an index :";
             index = atoi(str.c_str());
-            if (index < 0 || index >= this->index)
+            if ((!(str[0] >= '0' && str[0] <= '9')) || (index < 0 || index >= this->index))
             {
                 std::cout << "Invalid index please, chose a valid one!" <<std::endl;
                 std::cout << "Select an index :";
