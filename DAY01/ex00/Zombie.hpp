@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 03:44:23 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/23 05:58:11 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/23 22:51:26 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class Zombie
 {
     private:
         std::string z_name;
-    
     public:
         ////--------Member functions----------------
         //---Constructor && Destructor----

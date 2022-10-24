@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 04:30:26 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/24 00:50:30 by zrabhi           ###   ########.fr       */
+/*   Created: 2022/10/23 03:44:23 by zrabhi            #+#    #+#             */
+/*   Updated: 2022/10/24 01:22:08 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIE_H
+# define ZOMBIE_H
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string.h>
 
-
-void	randomChump( std::string z_name)
+class Zombie
 {
-	Zombie Zombie(z_name);
-	Zombie.announce();
-}
+    private:
+        std::string z_name;
+    public:
+        ////--------Member functions----------------
+        //---Constructor && Destructor----
+        Zombie();
+        ~Zombie();
+        void announce( int N );
+        int set_name( std::string name );
+};
 
-int _main()
-{
-
-		Zombie *Zombie1;
-
-	Zombie1 = newZombie("James");
-	Zombie1->announce(); 
-	randomChump("Jhone");
-	//  delete Zombie1;
-	 return(1);
-
-}
-int main ()
-{
-	_main();
-	system("leaks Zombie");
-	
-}
+Zombie *zombieHorde( int N, std::string name );
+#endif
