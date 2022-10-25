@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 04:02:30 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/23 22:30:33 by zrabhi           ###   ########.fr       */
+/*   Created: 2022/10/24 03:12:59 by zrabhi            #+#    #+#             */
+/*   Updated: 2022/10/25 00:43:13 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMAN_B
+# define HUMAN_B
 
-void Zombie::announce( void )
-{
-    std::cout << this->z_name + ":  BraiiiiiiinnnzzzZ... " << std::endl;
-}
+#include <iostream>
+#include "Weapon.hpp"
 
-Zombie::Zombie(std::string z_name)
-{
-        this->z_name = z_name;        
-}
 
-Zombie::~Zombie()
-{
-    std::cout << this->z_name + " has been detroyed" <<std::endl;
-}
+class HumanB {
+    private:
+        Weapon *Weapon_b;
+        std::string name;
+    public:
+        HumanB(std::string name);
+        void    setWeapon(Weapon &_Weapon);
+        void    attack( void );
+};
 
-Zombie *newZombie( std::string name)
-{
-    return (new Zombie(name));
-}
-
+#endif

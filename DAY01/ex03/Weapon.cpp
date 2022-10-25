@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 04:02:30 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/23 22:30:33 by zrabhi           ###   ########.fr       */
+/*   Created: 2022/10/24 21:25:51 by zrabhi            #+#    #+#             */
+/*   Updated: 2022/10/25 00:40:31 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-void Zombie::announce( void )
-{
-    std::cout << this->z_name + ":  BraiiiiiiinnnzzzZ... " << std::endl;
+Weapon::Weapon(std::string type) : type(type) {
+
 }
 
-Zombie::Zombie(std::string z_name)
-{
-        this->z_name = z_name;        
+const std::string&  Weapon::getType( void ){
+    
+    const std::string &ptr = this->type;
+    return (ptr);
 }
 
-Zombie::~Zombie()
+void    Weapon::setType(std::string _type)
 {
-    std::cout << this->z_name + " has been detroyed" <<std::endl;
+        if (_type == "")
+            std::cout << " You must give a weapon !  " << std::endl;
+        this->type = _type;     
 }
-
-Zombie *newZombie( std::string name)
-{
-    return (new Zombie(name));
-}
-
