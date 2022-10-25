@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:44:10 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/25 00:10:28 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/25 15:52:35 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,8 @@ int main()
         club.setType("some other type of club");
         jim.attack();
     }
-return 0;
+    // system("leaks Weapon");
+    return 0;
 }   
+
+

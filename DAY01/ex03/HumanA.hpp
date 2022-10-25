@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 03:13:02 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/25 00:36:14 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/25 14:20:34 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class HumanA {
     public:
         HumanA(std::string name, Weapon &WeaponA);
         void    attack( void );
+
 };
 
 #endif
