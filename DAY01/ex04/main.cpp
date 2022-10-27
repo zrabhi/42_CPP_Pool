@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
+/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:22:03 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/25 17:54:35 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/26 16:33:51 by zakaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,13 @@ void append_str(std::string &str, char *av)
     str += ".replace";
 }
 
+
 bool check_args(int ac)
 {
     if (ac == 1 || ac < 4)
         return (printe_error(0));
     return (true);    
 } 
-
-// void    AppendOnFile(int file)
-// {
-    
-
-
-
-// }
 
 
 int main(int ac, char **av)
@@ -60,13 +53,23 @@ int main(int ac, char **av)
         append_str(str, av[1]);
         fstream rp_file;
         std::cout << str << std::endl;
-        rp_file.open(str, ios::out );
+        rp_file.open(str, ios::out);
         if (!rp_file)
             std::cout << "file can t be open !" << std::endl;
-        else
-             std::cout << rp_file << std::endl;
+        while (std::getline(file, str))
+        {
+            int i = str.find(av[2]);
+            if (i != -1 || str = "")
+            {
+                str.erase(i, strlen(av[2]));
+                str.insert(i, av[3]);
+                rp_file << str << std::endl;
+            }
+        }
+        rp_file.close();
         return (0);
     }             
     return (printe_error(1), 0);
 }
+
 

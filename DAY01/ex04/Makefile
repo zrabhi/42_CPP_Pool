@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+         #
+#    By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 15:23:18 by zrabhi            #+#    #+#              #
-#    Updated: 2022/10/25 16:23:14 by zrabhi           ###   ########.fr        #
+#    Updated: 2022/10/26 16:22:17 by zakaria          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ $(NAME) : $(OBJ)
 
 clean:
 	@$(RM) $(OBJ)
+	@$(RM) *.replace
 	@echo " $(BLUE)Removing obj...$(BLUE)"
 	
 fclean : clean
