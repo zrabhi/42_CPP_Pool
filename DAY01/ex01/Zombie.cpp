@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 04:02:30 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/24 01:15:34 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/28 23:13:23 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int Zombie::set_name( std::string name)
 
 Zombie *zombieHorde( int N, std::string name )
 {
-      Zombie *Zombies = new Zombie[N];
+    Zombie *Zombies = new Zombie[N];
 
     while (N--)
         Zombies[N].set_name(name); 

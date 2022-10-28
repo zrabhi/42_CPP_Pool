@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 04:30:26 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/24 01:17:47 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/28 23:13:42 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 {
 	Zombie *Zombie1;
 
-	Zombie1 = zombieHorde(10, "");
+	Zombie1 = zombieHorde(10, "James");
 	Zombie1->announce(10);
 	delete [] Zombie1;
 }

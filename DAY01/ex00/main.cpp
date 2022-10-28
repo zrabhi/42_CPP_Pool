@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 04:30:26 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/24 00:50:30 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/10/28 23:14:55 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	randomChump( std::string z_name)
 	Zombie.announce();
 }
 
-int _main()
+int main()
 {
 
 		Zombie *Zombie1;
@@ -28,13 +28,7 @@ int _main()
 	Zombie1 = newZombie("James");
 	Zombie1->announce(); 
 	randomChump("Jhone");
-	//  delete Zombie1;
-	 return(1);
+	delete Zombie1;
+	return(1);
 
-}
-int main ()
-{
-	_main();
-	system("leaks Zombie");
-	
 }
