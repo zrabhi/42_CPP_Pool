@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:22:03 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/10/28 23:17:51 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/01 03:40:07 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ int main(int ac, char **av)
         str.clear();
         size_t i;
         while (std::getline(file, str1, '\0'))
-                str = str1;
+                str = str1 ;
         i = 0;
         while ((i = str.find(av[2], i)) && i != (size_t)-1) //2's comp //n todo : check if i is positive 
         {
             appendReplcae(str, i, av[3], strlen(av[2]));
-            i += strlen(av[3]); 
+            i += strlen(av[3]);
         }
         rp_file << str;
         rp_file.close();
