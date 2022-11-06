@@ -27,8 +27,15 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& obj)
 void    ClapTrap::attack( const std::string& target)
 {
 
+    std::cout << "ClapTrap  " + this->name + "attacks  " + target + "causing " + 
 
 }
+
+void    ClapTrap::beRepaired( unsigned int amount)
+{
+
+}
+
 
 void    ClapTrap::takeDamage( unsigned int amount )
 {
