@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+         #
+#    By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 01:48:22 by zrabhi            #+#    #+#              #
-#    Updated: 2022/11/06 01:48:49 by zrabhi           ###   ########.fr        #
+#    Updated: 2022/11/06 17:30:39 by zakaria          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,10 @@ OBJ		:= $(SRC:.cpp=.o)
 CC 		:= c++
 RM 		:= rm -f
 FLAGS	:= -Wall -Werror -Wextra -std=c++98
-NAME 	:= ClapTrap
+NAME 	:= Serena
 
 all: $(NAME)
-	@echo " $(BLUE)Creating ClapTrap...$(BLUE)"
+	@echo " $(BLUE)Creating Serena...$(BLUE)"
 
 $(NAME) : $(OBJ)
 	@$(CC) $(FLAGS) $(SRC) -o $(NAME)
