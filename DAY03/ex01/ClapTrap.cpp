@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:39:59 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/06 17:10:28 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/07 03:40:09 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void    ClapTrap::attack( const std::string& target)
 
     if (this->e_point && this->h_point)
     {
-        std::cout << this->name + " attacks " + target + " causing " << this->h_point << " points of damage" << std::endl;
+        std::cout << "ClapTrap" + this->name + " attacks " + target + " causing " << this->h_point << " points of damage" << std::endl;
         this->h_point = 0;
         this->e_point--;
     }
@@ -72,7 +72,7 @@ void    ClapTrap::beRepaired( unsigned int amount )
 
 void    ClapTrap::takeDamage( unsigned int amount )
 {
-    std::cout << "ClapTrap ";
+    std::cout << "ClapTrap " << this->name;
     if (!this->h_point)
         std::cout << "is already dead! " << std::endl;
     if (amount > 0 && this->h_point <= amount )

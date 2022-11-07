@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:39:59 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/06 17:10:28 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:33:44 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void    ClapTrap::attack( const std::string& target)
     if (this->e_point && this->h_point)
     {
         std::cout << this->name + " attacks " + target + " causing " << this->h_point << " points of damage" << std::endl;
-        this->h_point = 0;
+        this->h_point -= 1;
         this->e_point--;
     }
     else
@@ -83,12 +83,12 @@ void    ClapTrap::takeDamage( unsigned int amount )
             this->e_point--;
             std::cout << "takes " << amount << " of damage and ";
             if (!this->h_point)
-                   std::cout << " he lost all his hp points" << std::endl;
+                   std::cout << "he lost all his hp points" << std::endl;
             else 
                 std::cout << "still have " << this->h_point << " hp remaining!" << std::endl;
         }      
         else
-            std::cout << " Sorry, can't do anything without EnergyPoints" << std::endl;
+            std::cout << "Sorry, can't do anything without EnergyPoints" << std::endl;
     }
     else 
         std::cout << "can't hit with this amount!" << std::endl;

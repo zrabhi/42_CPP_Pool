@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:39:55 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/06 17:23:43 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/07 01:44:03 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 #include <iostream>
 
 class ClapTrap {
-    private:
+    
+    protected: // t make the child class inherite private data
         std::string  name;
         unsigned int h_point; //----represent the health of the ClapTrap.
         unsigned int e_point;
