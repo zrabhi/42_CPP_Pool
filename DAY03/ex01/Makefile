@@ -6,12 +6,12 @@
 #    By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 01:48:22 by zrabhi            #+#    #+#              #
-#    Updated: 2022/11/06 17:30:39 by zakaria          ###   ########.fr        #
+#    Updated: 2022/11/07 20:11:53 by zakaria          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 BLUE 	:= \033[1;34m
-SRC 	:= main.cpp ClapTrap.cpp
+SRC 	:= main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ		:= $(SRC:.cpp=.o)
 CC 		:= c++
 RM 		:= rm -f

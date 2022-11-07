@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
+/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:39:55 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/07 01:44:03 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/07 20:38:48 by zakaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 
 class ClapTrap {
     
-    protected: // t make the child class inherite private data
-        std::string  name;
-        unsigned int h_point; //----represent the health of the ClapTrap.
-        unsigned int e_point;
-        unsigned int a_damage;
+    protected: // it make the child class inherite private data >&& the data is private for ClapTrap
+        std::string  name;     //-------represent the name of the ClapTrap.
+        unsigned int h_point;  //----represent the health of the ClapTrap.
+        unsigned int e_point;  //----represent the energy of the ClapTrap.
+        unsigned int a_damage; //---represent the attack damage of the clapTrap.
     public:
         ClapTrap();
         ClapTrap( const ClapTrap& obj );

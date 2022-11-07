@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
+/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 01:21:55 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/07 03:57:24 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/07 20:14:42 by zakaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ ScavTrap::ScavTrap( const ScavTrap& obj)
     std::cout << "Copy constructor called" << std::endl;
 }
 
+ScavTrap::~ScavTrap()
+{
+	std::cout << "ScavTrap destructor called for " << this->name << std::endl;
+}
+
 ScavTrap& ScavTrap::operator = ( const ScavTrap& obj )
 {
     std::cout << "Copy assignement operator called" << std::endl;
@@ -52,7 +57,7 @@ ScavTrap& ScavTrap::operator = ( const ScavTrap& obj )
     return (*this);
 }
 
-void   ScavTrap::attack(std::string &target)
+void   ScavTrap::attack(std::string const &target)
 {
     std::cout << "ScavTrap" ;
     if (this->e_point > 5)
@@ -70,8 +75,9 @@ void    ScavTrap::guardGate()
     std::cout << "Scavtrap " + this->name + " is now in gate keeper mode " << std::endl;
 }
 
-void    ScavTrap::takeDamage(unsigned int amount)
-{
-    std::cout << "ScavTrap ";
+// void    ScavTrap::takeDamage(unsigned int amount)
+// {
+//     this
+//     std::cout << "ScavTrap " ;
 
-}
+// }
