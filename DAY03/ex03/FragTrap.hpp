@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 05:33:47 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/08 05:33:48 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/08 16:45:44 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ class FragTrap : virtual public ClapTrap {
         void    attack(std::string const &target);
         void    highFivesGuys ( void );  
 } ; 
+
 # endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 01:21:55 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/08 02:24:38 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/08 17:02:01 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap& ScavTrap::operator = ( const ScavTrap& obj )
 {
-        std::cout << "Copy assignement operator called" << std::endl;
+        std::cout << "Copy assignement operator called for " + this->name << std::endl;
     if (this != &obj)
     {
         this->name = obj.name;
@@ -62,7 +62,7 @@ ScavTrap& ScavTrap::operator = ( const ScavTrap& obj )
 
 void   ScavTrap::attack(std::string const &target)
 {
-    std::cout << "ScavTrap" ;
+    std::cout << "ScavTrap " ;
     if (this->e_point > 5)
     {
         this->e_point -= 5; 

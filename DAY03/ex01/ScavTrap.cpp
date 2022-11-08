@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 01:21:55 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/08 02:16:09 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/08 16:37:15 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ScavTrap::ScavTrap(std::string _name)
     this->h_point = 100;
     this->e_point = 50;
     this->a_damage = 20;
-    std::cout << "ScavTrap name constructor called" << std::endl;
+    std::cout << "ScavTrap name constructor called for  " + this->name << std::endl;
 }
 
 ScavTrap::ScavTrap( const ScavTrap& obj)
@@ -36,7 +36,7 @@ ScavTrap::ScavTrap( const ScavTrap& obj)
     this->h_point = obj.h_point;
     this->e_point = obj.e_point;
     this->a_damage = obj.a_damage;
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructor called for  " + this->name  << std::endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -46,7 +46,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap& ScavTrap::operator = ( const ScavTrap& obj )
 {
-    std::cout << "Copy assignement operator called" << std::endl;
+    std::cout << "Copy assignement operator called for " + this->name << std::endl;
     if (this != &obj)
     {
         this->name = obj.name;
@@ -75,9 +75,3 @@ void    ScavTrap::guardGate()
     std::cout << "Scavtrap " + this->name + " is now in gate keeper mode " << std::endl;
 }
 
-// void    ScavTrap::takeDamage(unsigned int amount)
-// {
-//     this
-//     std::cout << "ScavTrap " ;
-
-// }

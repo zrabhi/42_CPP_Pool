@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:39:59 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/08 02:28:04 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/08 17:01:15 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void    ClapTrap::attack( const std::string& target)
 
     if (this->e_point && this->h_point)
     {
-        std::cout << "ClapTrap" + this->name + " attacks " + target + " causing " << this->h_point << " points of damage" << std::endl;
+        std::cout << "ClapTrap " + this->name + " attacks " + target + " causing " << this->h_point << " points of damage" << std::endl;
         this->h_point = 0;
         this->e_point--;
     }
@@ -92,6 +92,6 @@ void    ClapTrap::takeDamage( unsigned int amount )
             std::cout << "Sorry, can't do anything without EnergyPoints" << std::endl;
     }
     else 
-        std::cout << "can't hit with this amount!" << std::endl;
+        std::cout << " can't hit with this amount!" << std::endl;
     
 }

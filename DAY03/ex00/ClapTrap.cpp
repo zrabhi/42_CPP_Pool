@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:39:59 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/07 20:36:11 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/08 16:59:54 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
+    : h_point(10), e_point(10), a_damage(0)
 {
     std::cout << "Constructor Called" << std::endl;
 }
@@ -41,8 +42,8 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& obj)
     
     if (this != &obj)
     {
-        this->name = obj.name;
-        this->h_point = obj.h_point;
+        this->name    = obj.name;
+        this->h_point  = obj.h_point;
         this->e_point = obj.e_point;
         this->a_damage = obj.a_damage;
     }
@@ -52,7 +53,6 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& obj)
 void    ClapTrap::attack( const std::string& target)
 {
         
-
     if (this->e_point && this->h_point)
     {
         std::cout << this->name + " attacks " + target + " causing " << this->h_point << " points of damage" << std::endl;
@@ -93,5 +93,4 @@ void    ClapTrap::takeDamage( unsigned int amount )
     }
     else 
         std::cout << " can't hit with this amount!" << std::endl;
-    
 }
