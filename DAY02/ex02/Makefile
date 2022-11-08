@@ -6,27 +6,24 @@
 #    By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/03 15:05:44 by zrabhi            #+#    #+#              #
-#    Updated: 2022/11/08 06:24:45 by zrabhi           ###   ########.fr        #
+#    Updated: 2022/11/08 19:18:27 by zrabhi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-BLUE 	:= \033[1;34m
-SRC 	:= main.cpp Fixed.cpp
-# OBJ		:= $(SRC:.cpp=.o)
+SRC 	:= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 CC 		:= c++
 RM 		:= rm -f
-FLAGS	:= -Wall -Werror -Wextra -std=c++98
-NAME 	:= Overload
-
+OBJ		:= $(SRC:%.cpp=%.o)
+FLAG	:= -Wall -Werror -Wextra -Wshadow  -Wno-shadow -std=c++98
+NAME 	:= FragTrap
+HEADERS := ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 all: $(NAME)
-	@echo " $(BLUE)Creating Overload...$(BLUE)"
+	@echo " $(BLUE)Creating ClavTrap...$(BLUE)"
 
-
-$(NAME):
-	$(CC) $(FLAGS) $(SRC) -o $(NAME)
-
-%.cpp:%.o
-	$(CC) $(FLAGS) $(SRC) -o $(NAME)
+$(NAME) : $(OBJ)
+	$(CC) $(FLAG) $(SRC) -o $(NAME)
+%.o: %.cpp $(HEADERS)
+	@$(CC) $(FLAG) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJ)
@@ -35,5 +32,5 @@ clean:
 fclean : clean
 	@echo " $(BLUE)file removed succesfully$(BLUE)"
 	@$(RM) $(NAME)
-
+	
 re : fclean all

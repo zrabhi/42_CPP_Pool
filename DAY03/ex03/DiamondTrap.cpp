@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 05:33:38 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/08 17:03:19 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/08 18:44:02 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ DiamondTrap::DiamondTrap(std::string target)
 DiamondTrap::DiamondTrap(const DiamondTrap& obj)
     : ClapTrap(obj), ScavTrap(), FragTrap()
 {   
-    std::cout << "DiomandTrap Copy constructor called for " + this->name  << std::endl;
+    std::cout << "DiomandTrap Copy constructor called for " + this->_name  << std::endl;
     this->name = obj.name;
     this->h_point = obj.h_point;
     this->e_point = obj.e_point;
@@ -42,12 +42,12 @@ DiamondTrap::DiamondTrap(const DiamondTrap& obj)
 
 DiamondTrap::~DiamondTrap()
 {
-    std::cout << "DiomandTrap destructor called for " << this->name << std::endl;
+    std::cout << "DiomandTrap destructor called for " << this->_name << std::endl;
 }
 
 DiamondTrap&  DiamondTrap::operator=(const DiamondTrap& obj)
 {
-    std::cout << "Copy assignement operator called" << std::endl;
+    std::cout << "Copy assignement operator called for " + this->_name << std::endl;
     if (this != &obj)
     {
         this->name = obj.name;

@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 05:33:44 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/08 18:38:19 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/08 18:43:30 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ FragTrap& FragTrap::operator=( const FragTrap& obj)
 
 void   FragTrap::attack(std::string const &target)
 {
-    std::cout << "ScavTrap" ;
+    std::cout << "ScavTrap " + this->name ;
     if (this->e_point > 5)
     {
         this->e_point -= 5; 

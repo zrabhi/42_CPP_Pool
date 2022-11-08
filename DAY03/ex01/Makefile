@@ -3,26 +3,27 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+         #
+#    By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 01:48:22 by zrabhi            #+#    #+#              #
-#    Updated: 2022/11/07 20:11:53 by zakaria          ###   ########.fr        #
+#    Updated: 2022/11/08 19:21:27 by zrabhi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-BLUE 	:= \033[1;34m
 SRC 	:= main.cpp ClapTrap.cpp ScavTrap.cpp
-OBJ		:= $(SRC:.cpp=.o)
 CC 		:= c++
 RM 		:= rm -f
-FLAGS	:= -Wall -Werror -Wextra -std=c++98
-NAME 	:= Serena
-
+OBJ		:= $(SRC:%.cpp=%.o)
+FLAG	:= -Wall -Werror -Wextra -Wshadow  -Wno-shadow -std=c++98
+NAME 	:= ScavTrap
+HEADERS := ClapTrap.hpp ScavTrap.hpp 
 all: $(NAME)
-	@echo " $(BLUE)Creating Serena...$(BLUE)"
+	@echo " $(BLUE)Creating ScavTrap...$(BLUE)"
 
 $(NAME) : $(OBJ)
-	@$(CC) $(FLAGS) $(SRC) -o $(NAME)
+	$(CC) $(FLAG) $(SRC) -o $(NAME)
+%.o: %.cpp $(HEADERS)
+	@$(CC) $(FLAG) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJ)
@@ -31,5 +32,5 @@ clean:
 fclean : clean
 	@echo " $(BLUE)file removed succesfully$(BLUE)"
 	@$(RM) $(NAME)
-
+	
 re : fclean all
