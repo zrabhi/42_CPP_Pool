@@ -6,7 +6,7 @@
 /*   By: zakaria <zakaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:39:59 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/07 20:56:25 by zakaria          ###   ########.fr       */
+/*   Updated: 2022/11/08 02:28:04 by zakaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,7 @@ void    ClapTrap::attack( const std::string& target)
 void    ClapTrap::beRepaired( unsigned int amount )
 {
     this->h_point += amount;
-    std::cout << "ClapTrap " << this->name << " is healed " << amount << " hit points, now has " << this->h_point << " hit points." << std::endl;
-    
+    std::cout << "ClapTrap " << this->name << " is healed " << amount << " hit points, now has " << this->h_point << " hit points." << std::endl;    
 }
 
 void    ClapTrap::takeDamage( unsigned int amount )
@@ -76,7 +75,7 @@ void    ClapTrap::takeDamage( unsigned int amount )
   
     std::cout << "ClapTrap " << this->name;
     if (!this->h_point)
-        std::cout << "is already dead! " << std::endl;
+        std::cout << " is already dead! " << std::endl;
     if (amount > 0 && this->h_point <= amount )
     {
         if (!this->e_point ) 
@@ -87,7 +86,7 @@ void    ClapTrap::takeDamage( unsigned int amount )
             if (!this->h_point)
                    std::cout << " he lost all his hp points" << std::endl;
             else 
-                std::cout << "still have " << this->h_point << " hp remaining!" << std::endl;
+                std::cout << " still have " << this->h_point << " hp remaining!" << std::endl;
         }      
         else
             std::cout << "Sorry, can't do anything without EnergyPoints" << std::endl;
