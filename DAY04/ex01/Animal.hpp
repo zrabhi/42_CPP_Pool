@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:31:42 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/09 16:40:10 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/10 19:01:44 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #ifndef ANIMAL_H
 # define ANIMAL_H
 
-#include <iostream>
+# include <iostream>
+# include <string>
 
 class Animal {
     protected:
@@ -23,9 +24,10 @@ class Animal {
         Animal();
         Animal(std::string _type);
         Animal(const Animal& obj);       
-        Animal& operator = (const Animal& obj);
-        ~Animal();
+        const Animal& operator = (Animal const & obj);
+        std::string getType( void ) const;
+        virtual void makeSound( void ) const;
+        virtual  ~Animal();
 } ;
 
 #endif
-
