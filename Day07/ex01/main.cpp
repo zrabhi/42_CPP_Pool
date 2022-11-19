@@ -5,31 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 13:59:14 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/18 17:04:23 by zrabhi           ###   ########.fr       */
+/*   Created: 2022/11/19 17:39:09 by zrabhi            #+#    #+#             */
+/*   Updated: 2022/11/19 18:31:56 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Scalar.hpp"
-
-int main(int ac, char **av)
+#include <iostream>
+#include <ctype.h>
+template <typename Type>
+void    iter(Type *array, Type length, void (*f_ptr)(Type))
 {
-    std::string str;
-    int type = t_int;
-    try
-    {
-        if (av[1] && ac > 1)
-        {
-            str = static_cast<std::string>(av[1]);     
-            Scalar i(str, &type);
-            std::cout << i;
-            return (1);
-        }
-        throw Scalar::NoUserInput();
-    }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
+    int i;
+    
+    i = -1;
+    while (++i < length)
+        (*f_ptr)(array[i]);
+}
 
+template <typename Type>
+
+void    print(Type val)
+{
+    std::cout << "value is " << val << std::endl;
+}
+
+int  main()
+{
+    int array[5] = {0,1,2,3,4};
+    iter(array, 5, &print);
+
+    // char str[15] = "zakaria rabhi";
+    // iter<char *, int >(str, 15, &print);  
 }

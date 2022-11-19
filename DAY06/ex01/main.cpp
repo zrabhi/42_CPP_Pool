@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 12:37:00 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/18 12:55:18 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/18 17:45:15 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,8 @@ Data *deserialize(uintptr_t raw)
 int main()
 {
     uintptr_t raw;
-    Data ptr;
-
-    // ptr = NULL;
-    ptr.i = 5;
-    ptr.str = "zac";
+    Data ptr = {.i= 5, .str="zac"};
+    
     std::cout << "before cast" << std::endl;
     std::cout << ptr.i << std::endl ;
     std::cout << ptr.str << std::endl;

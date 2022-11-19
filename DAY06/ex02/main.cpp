@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:47:52 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/18 16:41:58 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/19 08:52:02 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void    identify(Base *p)
 
 void    identify(Base& p)
 {
-
-	Base &check = p;
+	void *t = NULL;
+	Base &check = (Base &)t;
 	try
 	{
 		switch (rand() % 3)
@@ -57,20 +57,25 @@ void    identify(Base& p)
 			case 0 :
 				check = dynamic_cast<A &> (p);
 					std::cout << "A is the identified type" << std::endl;
+				break;
 			case 1:
 				check = dynamic_cast<B &> (p);
 					std::cout << "B is the identified type" << std::endl;
+				break;
 			case 2:
 				check = dynamic_cast<C &> (p);
 					std::cout << "C is the identified type" << std::endl;
+				break ;
 			default:
 				std::cout << "Uknown Type";
+				break ;
 		}	
 
 	}
 	catch (std::bad_cast &e)
 	{
-			std::cout << e.what() << std::endl;
+			identify(p);
+			// std::cout << e.what() << std::endl; // synamic_cast exception (std::bad_cast)
 	}
 }
 
@@ -83,12 +88,9 @@ int main()
 		Base *Test = generate();
 		if (!Test)
 			return (1);
-		else
-		{
-			identify(Test);
-			identify(*Test);
-			delete (Test);
-		}
+		identify(Test);
+		identify(*Test);
+		delete (Test);
 	}
 	catch(std::bad_cast &e)
 	{

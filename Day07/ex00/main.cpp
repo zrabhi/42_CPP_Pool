@@ -5,31 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 13:59:14 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/18 17:04:23 by zrabhi           ###   ########.fr       */
+/*   Created: 2022/11/19 12:32:28 by zrabhi            #+#    #+#             */
+/*   Updated: 2022/11/19 17:37:02 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Scalar.hpp"
+#include "Tfunction.hpp"
 
-int main(int ac, char **av)
+int main( void ) 
 {
-    std::string str;
-    int type = t_int;
-    try
-    {
-        if (av[1] && ac > 1)
-        {
-            str = static_cast<std::string>(av[1]);     
-            Scalar i(str, &type);
-            std::cout << i;
-            return (1);
-        }
-        throw Scalar::NoUserInput();
-    }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-
+    int a = 2;
+    int b = 3;
+    
+    ::swap( a, b );
+    std::cout << "a = " << a << ", b = " << b << std::endl;
+    std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+    std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+    
+    std::string c = "chaine1";
+    std::string d = "chaine2";
+    
+    ::swap(c, d);
+    std::cout << "c = " << c << ", d = " << d << std::endl;
+    std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+    std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 }
