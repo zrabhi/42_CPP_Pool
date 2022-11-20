@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:36:15 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/19 17:35:22 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/20 15:53:29 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 template <typename Type>
 
-void   swap(Type &x, Type   &y)
+void   swap(Type &x, Type &y)
 {
     Type tmp;
 
@@ -29,20 +29,16 @@ void   swap(Type &x, Type   &y)
 
 template<typename Type> 
 
-Type min( Type x, Type y)
+const Type& min( const Type& x, const Type& y)
 {
-    if ( x < y )
-        return ( x) ;
-    return ( y );
+    return ( x < y) ? x : y;
 }
 
 template<typename Type>
 
-Type max( Type x, Type y )
+const Type& max( const Type& x, const Type& y )
 {
-    if ( x > y )
-        return ( x );
-    return ( y )   ;
+   return ( x > y) ? x : y;
 }
 
 
