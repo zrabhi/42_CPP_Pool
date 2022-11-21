@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/19 17:39:12 by zrabhi            #+#    #+#              #
-#    Updated: 2022/11/19 17:39:35 by zrabhi           ###   ########.fr        #
+#    Created: 2022/11/21 14:37:55 by zrabhi            #+#    #+#              #
+#    Updated: 2022/11/21 14:40:24 by zrabhi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ CC 		:= c++
 RM 		:= rm -f
 OBJ		:= $(SRC:%.cpp=%.o)
 FLAG	:= -Wall -Werror -Wextra -std=c++98
-NAME 	:= Iter
-HEADERS := Iter.hpp
+NAME 	:= easyfind
+HEADERS := easyfind.hpp
 
 all: $(NAME)
-	@echo " $(BLUE)Creating Iter...$(BLUE)"
+	@echo " $(BLUE)Creating easyfind...$(BLUE)"
 
 $(NAME) : $(OBJ)
 	$(CC) $(FLAG) $(SRC) -o $(NAME)

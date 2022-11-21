@@ -5,22 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/19 12:32:25 by zrabhi            #+#    #+#              #
-#    Updated: 2022/11/19 17:33:51 by zrabhi           ###   ########.fr        #
+#    Created: 2022/11/21 16:15:06 by zrabhi            #+#    #+#              #
+#    Updated: 2022/11/21 19:17:24 by zrabhi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 BLUE 	:= \033[1;34m
-SRC 	:= main.cpp 
+SRC 	:= main.cpp Span.cpp
 CC 		:= c++
 RM 		:= rm -f
 OBJ		:= $(SRC:%.cpp=%.o)
 FLAG	:= -Wall -Werror -Wextra -std=c++98
-NAME 	:= Tfunctions
-HEADERS := Tfunstions.hpp
+NAME 	:= Span
+HEADERS := Span.hpp
 
 all: $(NAME)
-	@echo " $(BLUE)Creating Tfunctions...$(BLUE)"
+	@echo " $(BLUE)Creating Span...$(BLUE)"
 
 $(NAME) : $(OBJ)
 	$(CC) $(FLAG) $(SRC) -o $(NAME)
