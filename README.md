@@ -3,17 +3,17 @@
   
 ## Programming styles
 
-Procedural oriented programming (C)
+Procedural oriented programming (C).
 
-Object oriented programming (C++, Java, Python, Ruby, C#)
+Object oriented programming (C++, Java, Python, Ruby, C#).
 
-Functional programming (Javascript, Clojure, Haskell). It focuses on pure mathematical functions and immutable data
+Functional programming (Javascript, Clojure, Haskell). It focuses on pure mathematical functions and immutable data.
 
-Logical programming
+Logical programming.
 
-Database programming (SQL)
+Database programming (SQL).
 
-What Object Oriented Programming (OOP) is
+## What Object Oriented Programming (OOP) is
 
 OOP bundles data & the functions which act on it together. It can aid conceptualising a program, because in calling a member function, one if effectively telling the data what to do to itself
 
