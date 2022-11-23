@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 19:13:31 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/21 20:59:58 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/22 08:24:49 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,18 @@ int main()
         std::vector<int> test;
         
         while (++i < 10000 ) 
-            a.addNumber(i), test.push_back(i);
+        {
+            a.addNumber(i);
+             test.push_back(i);
+        }
         std::cout << a.shortestSpan() << std::endl;
         std::cout << a.longestSpan()  << std::endl;
         std::cout << "\001\e[1;36m*****************Third test*****************\001\e[0m\002" << std::endl;
-        Span b(20000);
-        
+        Span b(2000);
+
         i = -1;
         while (++i < 10000 ) 
-            b.addNumber(i); 
+            b.addNumber(i);
         b.addMaNumber(test.begin(), test.end()); 
         std::cout << a.shortestSpan() << std::endl;
         std::cout << a.longestSpan()  << std::endl;    

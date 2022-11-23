@@ -6,7 +6,7 @@
 /*   By: zrabhi <zrabhi@student.1337.ma >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:15:24 by zrabhi            #+#    #+#             */
-/*   Updated: 2022/11/21 20:58:52 by zrabhi           ###   ########.fr       */
+/*   Updated: 2022/11/22 08:24:06 by zrabhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ unsigned int   Span::longestSpan( void ) const
 void    Span::addMaNumber( std::vector<int>::iterator B, std::vector<int>::iterator E) 
 {   
 
-    if (std::distance(this->_V.begin(), this->_V.end()) + this->_V.size() > this->_N)
+    if ( this->_V.size() > this->_N)
         throw   NoEnoughSpace();
   while (B != E)
         this->_V.insert(this->_V.begin(), *B++);
