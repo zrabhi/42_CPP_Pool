@@ -1,7 +1,7 @@
 # Introduction to Object Oriented Programming 
 
   
-##Programming styles
+## Programming styles
 
 Procedural oriented programming (C)
 
@@ -25,7 +25,7 @@ Same name, different function. Different functions can have the same name provid
 
 Derived classes. If one requires a class which like a class one already has but requires extra features then one can derive a class from an existing class
 
-##Advantages of C++ over C
+## Advantages of C++ over C
 
 Strings & arrays. C does not really have variables of string or array type. Although C++ does not come with strings or arrays either, one can write classes which encapsulate the memory manipulation routines and, at last, use instances of them as if they were intrinsic string & array variables without further hassle
 
@@ -37,7 +37,7 @@ Unspecified variable type. C likes to know what type its variables are even when
 
 Localised namespaces. When writing a big program, it is difficult to ensure that names of functions are not duplicated in different files. This is especially a problem for little functions which need not be visible to other modules. In C++ there is a neater bodge-up: bunging all the functions from one file or module in a class, and neatly localises the function names.
 
-##Summary
+## Summary
 
 Object Oriented Programming is not as different from normal procedural programming as is made out by its advocates and is not as difficult to understand as their proselytising implies.
 
